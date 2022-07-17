@@ -1,0 +1,199 @@
+:root {
+	/* Dark Colors */
+	--pallete-black: #191919;
+	--pallete-navy-blue: #2d4263;
+	--pallete-red: #c84b31;
+	--pallete-beige: #ecdbba;
+	--pallete-light-beige: #faf3e3;
+}
+
+@font-face {
+	font-family: PressStart2P;
+	src: url("../assets/fonts/PressStart2P.ttf");
+}
+
+@font-face {
+	font-family: Emulator;
+	src: url("../assets/fonts/emulator.ttf");
+}
+
+@font-face {
+	font-family: EmotionEngine;
+	src: url("../assets/fonts/EmotionEngine.otf");
+}
+
+body {
+	font-family: PressStart2P;
+	background-color: var(--pallete-navy-blue);
+}
+
+.title-div {
+	display: flex;
+	flex-direction: row;
+	column-gap: 15px;
+	justify-content: center;
+	margin-bottom: 2%;
+}
+
+.dice-image {
+	width: 40px;
+	height: 40px;
+}
+
+#game-title {
+	font-family: Emulator;
+}
+
+#welcome-section {
+	position: absolute;
+	top: 50%;
+	left: 50%;
+	transform: translate(-50%, -50%);
+	background-color: white;
+	width: 100rem;
+	padding: 2% 1%;
+}
+
+.intro-div {
+	font-family: EmotionEngine;
+	font-size: 16px;
+}
+
+.card img {
+	margin-top: 4%;
+	height: 35%;
+	width: 35%;
+}
+
+#welcome-section .card-header {
+	padding: 5% 0%;
+	background-color: var(--pallete-light-beige);
+	color: var(--pallete-navy-blue);
+	text-align: center;
+	font-size: 16px;
+}
+
+#welcome-section .card-title {
+	font-family: EmotionEngine;
+}
+
+#welcome-section .card-text {
+	font-family: EmotionEngine;
+	font-size: 16px;
+	letter-spacing: 1px;
+}
+
+#welcome-section .card-footer {
+	font-family: PressStart2P;
+	letter-spacing: 2px;
+	font-size: 11px;
+	font-weight: 200;
+	padding-top: 4%;
+}
+
+.play-game-button-div {
+	display: flex;
+	justify-content: center;
+	margin-top: 4%;
+}
+
+.play-button {
+	width: 40%;
+}
+
+#game-score-board {
+	position: absolute;
+	top: 2%;
+	right: 1%;
+	z-index: 100;
+	width: 40rem;
+}
+
+#game-score-board .card-header {
+	background-color: var(--pallete-beige);
+}
+
+#game-score-board .row {
+	row-gap: 5px;
+}
+
+.player-div {
+	display: flex;
+	flex-direction: row;
+	align-items: center;
+	column-gap: 5px;
+}
+
+.player-1-legend,
+.player-2-legend,
+.player-3-legend,
+.player-4-legend,
+.player-5-legend {
+	width: 50px;
+	height: 70%;
+}
+
+.npc-text {
+	color: grey;
+}
+
+#board-interactor-div {
+	position: absolute;
+	top: 60%;
+	left: 50%;
+	transform: translate(-50%, -50%);
+	z-index: 100;
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+}
+
+.game-agreement-modal-body {
+	font-family: Emulator;
+	display: flex;
+	flex-direction: column;
+}
+
+.game-mode-button,
+.bet-button {
+	font-family: Emulator;
+	font-size: 11px;
+}
+
+.betting-div,
+#clairvoyance-mode,
+#mathematician-mode {
+	font-family: Emulator;
+	align-items: center;
+	display: flex;
+	flex-direction: row;
+	column-gap: 5px;
+}
+
+.bet,
+.player-number,
+.sum {
+	font-family: Emulator;
+	font-size: 11px;
+	width: fit-content;
+	padding: 1%;
+	border: 1px solid var(--pallete-navy-blue);
+	border-radius: 10px;
+}
+
+.game-instructions,
+#min-max-bet-span {
+	margin-top: 1%;
+	font-size: 10px;
+}
+
+#btn-group-odd-even-mode,
+#clairvoyance-mode,
+#mathematician-mode {
+	position: absolute;
+	z-index: -99999;
+}
+
+#status {
+	text-align: center;
+}
