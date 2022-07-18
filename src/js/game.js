@@ -224,12 +224,12 @@ export default class Game {
 				if (currentMoney - minBet >= 0) {
 					plays.push({
 						play: Math.floor(Math.random() * 2),
-						bet: minBet
+						bet: minBet,
 					});
 				} else {
 					plays.push({
 						play: null,
-						bet: null
+						bet: null,
 					});
 				}
 			}
@@ -237,7 +237,7 @@ export default class Game {
 			plays.push({
 				player: this.playerNr,
 				bet: this.bet,
-				guess: this.dieNr
+				guess: this.dieNr,
 			});
 
 			// Randomize NPC plays (always bet minBet)
@@ -247,13 +247,13 @@ export default class Game {
 					plays.push({
 						player: i - 1, // choose the previous player
 						bet: minBet,
-						guess: Math.floor(Math.random() * 6) + 1
+						guess: Math.floor(Math.random() * 6) + 1,
 					});
 				} else {
 					plays.push({
 						player: null,
 						bet: null,
-						guess: null
+						guess: null,
 					});
 				}
 			}
@@ -268,12 +268,12 @@ export default class Game {
 					let max = 6 * vars.NUMBER_OF_PLAYERS;
 					plays.push({
 						sum: Math.floor(Math.random() * (max - min + 1)) + min,
-						bet: minBet
+						bet: minBet,
 					});
 				} else {
 					plays.push({
 						sum: null,
-						bet: null
+						bet: null,
 					});
 				}
 			}
@@ -316,7 +316,6 @@ export default class Game {
 
 	updateModes() {
 		Object.keys(vars.BETS).forEach((bet) => {
-			console.log(`game-btn-${bet + 1}`, bet);
 			let btn = document.getElementById(`game-btn-${parseInt(bet) + 1}`);
 			btn.disabled = this.scores[0] < vars.BETS[bet].min;
 		});
@@ -342,7 +341,7 @@ export default class Game {
 		}
 
 		this.scores.forEach((score, idx) => {
-			if (score === vars.GAME_WINNER_VAL) {
+			if (score >= vars.GAME_WINNER_VAL) {
 				winners.push(idx + 1);
 			}
 		});
@@ -355,7 +354,7 @@ export default class Game {
 		let placeBetBtn = document.getElementById("board-interactor-div");
 		placeBetBtn.style.zIndex = -999;
 
-		const plays = this.playOneRound(diceValues);
+		const plays = this.playOneRound();
 		const diceValues = randomDiceThrow();
 		this.updateBoard(plays, diceValues);
 		this.updateModes();
@@ -366,9 +365,11 @@ export default class Game {
 			this.updateHtmlText("place-bet-btn", "Reload to play again");
 		} else {
 			if (winners.length) {
-				this.updateHtmlText("status", "You Win");
+				// TODO: check number of winners and if the player won
+				this.updateHtmlText("status", "We have a winner!");
 				this.updateHtmlText("place-bet-btn", "Reload to play again");
 			} else {
+				this.updateHtmlText("place-bet-btn", "Place your bet");
 			}
 		}
 		// Show place bet button

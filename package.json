@@ -2,7 +2,7 @@
   "name": "3d-dice-roll-using-three-js",
   "version": "1.0.0",
   "description": "Example from threejs-dice module.",
-  "main": "index.html",
+  "default": "index.html",
   "scripts": {
     "start": "parcel index.html --open",
     "build": "parcel build index.html"
