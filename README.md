@@ -1,6 +1,6 @@
 # dice-games
 
-The current game was developed within the context of the gmtk game jam (see: https://itch.io/jam/gmtk-jam-2022 ).
+The current game was developed within the context of the GMTK game jam (see: https://itch.io/jam/gmtk-jam-2022).
 
 ## Dependencies
 
@@ -10,12 +10,14 @@ The current game was developed within the context of the gmtk game jam (see: htt
 
 To run this application, execute the following steps.
 
-1. Open a terminal and run `npm install`
-2. Now, run `npm start`
+1. Open a terminal and run `npm install`.
+2. Now, run `npm start`.
 
-Note that in some cases, `npm` needs `sudo` to be able to run in your machine.
+Note 1: in some cases, `npm` needs `sudo` to be able to run in your machine.
 
-3. Then, open a browser and go to `localhost:1234`
+Note 2: if you are having troubles running `npm install`, try adding the flag `--legacy-peer-deps` to the inital command.
+
+3. Then, open a browser and go to `localhost:1234`.
 
 ## Sneak Peek
 
