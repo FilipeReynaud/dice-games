@@ -7,13 +7,13 @@ The current game was developed within the context of the gmtk game jam (see: htt
 
 ## How to Run
 
-To run this application, open a terminal and run the following
+To run this application, execute the following steps.
+1. Open a terminal and run `npm install`
+1. Now, run `npm start`
 
-`npm start`
+Note that in some cases, `npm` needs `sudo` to be able to run in your machine.
 
-then, open a browser and go to
-
-`localhost:1234` 
+3. Then, open a browser and go to `localhost:1234` 
 
 ## Sneak Peek
 
